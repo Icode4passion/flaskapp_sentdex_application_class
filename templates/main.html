@@ -1,0 +1,160 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <!-- Link for all bootstrap icons which is not working with regular bootstrap CDN have to include it -->
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+      <link rel="shortcut icon" href="{{ url_for('static' , filename='img/favicon.ico') }}">
+
+      <title>Python Programming Tutorial</title>
+    </head>
+    
+      <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="{{ url_for('static' , filename='img/logo.png') }}" style="max-width:60px; margin-top: -7px;">
+    </a>
+
+    
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 5px; margin-bottom: 5px; height: 44px; margin-right: 15px">
+        <span class="glyphicon glyphicon-off" ></span> Start Learning
+      </button></a>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+        <h5>
+
+        <a href="/support-donate/"> <span class="glyphicon glyphicon-heart"></span> Support   </a>
+    
+        <a role="presentation" data-toggle="modal" data-target="#exampleModal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login   </a>
+
+        
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group">
+        
+              <label for="recipient-name" class="col-form-label">Username:</label>
+              <input type="text" class="form-control" id="recipient-name">
+        
+        <label for="recipient-name" class="col-form-label">Password:</label>
+              <input type="text" class="form-control" id="recipient-name">
+        
+        
+            </div>
+            <div class="form-group">
+              <p>No account? <a href='/register'>Register here</a>.</p>
+            
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<a role="presentation" data-toggle="modal" data-target="#register" href="#"><span class="glyphicon glyphicon-log-in"></span> SigIn   </a>
+
+        
+
+  <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form >
+            <div class="form-group">
+        
+              <label for="recipient-name" class="col-form-label">Username:</label>
+              <input type="text" id="username" name= "username" class="form-control" >
+        
+       <label for="recipient-name" class="col-form-label">Email address:</label>
+              <input type="text" id="email" name= "email" class="form-control" >
+        
+        <label for="recipient-name" class="col-form-label">Password:</label>
+              <input type="password" id="password" name= "password" class="form-control" >
+        
+       <label for="recipient-name" class="col-form-label">Re-Type Password:</label>
+              <input type="password" id="repassword" name= "repassword" class="form-control" >
+        
+        
+            </div>
+            <div class="form-group">
+              <input id="accept_tos" name="accept_tos" type="checkbox" value="y">
+              <label for="accept_tos">I accept the <a href="/about/tos" target="blank">Terms of Service</a> and <a href="/about/privacy-policy" target="blank">Privacy Notice</a> (updated Jan 22, 2015)</label>
+        
+            
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+      </ul>
+   
+  </nav>
+    
+      </header>
+      <body>
+
+
+        
+      <h1>Hello, Flask!</h1>
+
+      
+      <div class="container"   min-height="80%">
+        <a href="/dashboard/">
+
+
+      <video autoplay loop id="video-background" poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148422/screencap-wheel.png" muted  style="width:80%; max-height:80%">
+          <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148422/Vienna-SD.mp4" type="video/mp4">
+      </video></a>
+      </div>
+       
+      
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+  </html>
